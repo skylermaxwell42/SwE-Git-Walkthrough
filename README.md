@@ -30,3 +30,35 @@ Instructional repository for walking through how to utilize revision control to 
     ```bash
     git pull github master
     ```
+
+4. Create a new feature branch
+
+    We want to implement a new feature into our project. It's best practice to isolate the development environment while developing branches so we don't introduce bugs or errors into our working code base. Here we will create and checkout a new branch to develop our feature on.
+
+    - Command: `git branch <branch name>`
+
+    ```bash
+    git branch feature1
+    git checkout feature1
+    ```
+
+5. Implement feature1
+
+```bash
+# Creates empty file
+touch src/feature1.rb
+rm src/xyz.rb
+```
+
+6. Track changes
+
+```bash
+git add src/feature1.rb
+git add src/xyz.rb
+```
+
+7. Commit changes to local repository
+
+```bash
+git commit -m "Implemented feature1"
+```
