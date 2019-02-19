@@ -26,7 +26,7 @@ This process is advantageous when working on larger collaborative software proje
 
 3. Add a remote repository
 
-    Here we will tell Git to point to the link `https://origin.com/skylermaxwell42/SwE-Git-Walkthrough.git` when the remote name `origin` is used.
+    Here we will tell Git to point to the link `https://github.com/skylermaxwell42/SwE-Git-Walkthrough.git` when the remote name `origin` is used.
 
     - Command: `git remote add <remote name> <URL>`
 
