@@ -1,8 +1,11 @@
 # SwE-Git-Walkthrough
-Instructional repository for walking through how to utilize revision control to optimize the software development process.
+Git version control is the most popular version control software (VCS) used in industry and academia due to its efficiency, ease of use, and portability. The following walkthrough is a Git 101 with an emphasis on going through the motions of
 
+    1. Creating a repository
+    2. Implementing a feature in an isolated environment
+    3. Merging the feature with the main code base
 
-## Git Walkthrough
+This process is advantageous when working on larger collaborative software projects to help ensure that at any one time, the production version of the code base does not break. Feature branching gives software developers an isolated environment to implement features without having to worry about bugs or dependancies introduced by other developers, that is until its time to merge ...
 
 ### Initial Setup
 
@@ -87,7 +90,7 @@ Instructional repository for walking through how to utilize revision control to 
     git commit -m "Implemented feature1"
     ```
 
-    Note: If this was a real project we would normally push to our remote, `origin`, but push access is not available for this repo. The Git push command is `git push `
+    Note: If this was a real project we would normally push to our remote, `origin`, but push access is not available for this repo. The git push command is `git push <remote name> <remote branch name>`
 
 
 9. Merge changes into master
@@ -112,7 +115,7 @@ Instructional repository for walking through how to utilize revision control to 
     ```bash
     git fetch origin feature2
     git checkout feature2
-    git merge feature2 origin
+    git merge feature2 master
     ```
 
     Use the `ls src/` command to see that the changes made in `feature1` branch are reflected now in `feature2` branch. Note that in practice this can often lead to merge conflicts but can be avoided if managed properly.
