@@ -63,21 +63,23 @@ Instructional repository for walking through how to utilize revision control to 
     # Creates empty file
     touch src/feature1.rb
     rm src/xyz.rb
-    ruby src/generate_data.rb
     ```
-    Notice how a file has been generated in your directory.
-    But wait .... we have just generated some data within the repository directory that we dont want to check into our
 
 7. Track changes
+
+    Use the command `git status` to see the status of files under the working git repository. Note that because `src/xyz.rb` was already under git revision control it is has been tracked but not staged for commit. Now we will stage `src/feature1.rb` to be committed.
 
     - Command: `git add [<file_path>, ... ]`
 
     ```bash
     git add src/feature1.rb
-    git add src/xyz.rb
     ```
 
+    Use `git status` command again to see the changes to tracked and untracked files within the repository.
+
 8. Commit changes to local repository
+
+    Now that our files have been registered and tracked with git we can commit the changes to our local repository.
 
     - Command: `git commit -m "<message>"`
 
@@ -90,6 +92,8 @@ Instructional repository for walking through how to utilize revision control to 
 
 9. Merge changes into master
 
+    Once our feature1 has been developed we can merge it with `master` branch.
+
     - Commands: `git checkout <branch name>`, `git merge <dst branch name> <src branch name>`
 
     ```bash
@@ -101,7 +105,7 @@ Instructional repository for walking through how to utilize revision control to 
 
 10. Sync some other feature branch with master
 
-    Often when some feature is implemented and pushed into the `master` branch it may be useful to sync `master` with another working feature branch. Here we will fetch and checkout `feature2` branch and then merge the changes we to `origin` into `feature2`.
+    Often when some feature is implemented and pushed into the `master` branch it may be useful to sync `master` with another working feature branch. Here we will fetch and checkout a work-in-progress feature branch, `feature2`, then cascade the changes we made to `origin` into `feature2`.
 
     - Command: `git fetch <remote name> <remote branch name>`
 
@@ -111,4 +115,4 @@ Instructional repository for walking through how to utilize revision control to 
     git merge feature2 origin
     ```
 
-    Use the `ls src/` command to see that the changes made in `feature1` branch are reflected now in `feature2` branch.
+    Use the `ls src/` command to see that the changes made in `feature1` branch are reflected now in `feature2` branch. Note that in practice this can often lead to merge conflicts but can be avoided if managed properly.
