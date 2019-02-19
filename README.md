@@ -47,7 +47,7 @@ This process is advantageous when working on larger collaborative software proje
     Note: The previous steps can be be performed in one command, `git pull https://github.com/skylermaxwell42/SwE-Git-Walkthrough.git`, however doesn't offer as much versatility.
 
 
-### Implementing a Feature with branches
+### Implementing a Feature with Branches
 
 5. Create a new feature branch
 
