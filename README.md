@@ -1,5 +1,5 @@
 # SwE-Git-Walkthrough
-Git version control is the most popular version control software (VCS) used in industry and academia due to its efficiency, ease of use, and portability. The following walkthrough is a Git 101 with an emphasis on going through the motions of
+Git version control is the most popular version control software (VCS) used in industry and academia due to its efficiency, ease of use, and portability. The following walkthrough is a Git 101 with an emphasis on going through the motions of;
 
     1. Creating a repository
     2. Implementing a feature in an isolated environment
